@@ -886,7 +886,7 @@ class ContactForm extends Object {
 			Requirements::customScript($this->getValidationJS());
 
 		}
-		if($data = Session::get("FormData.{$this->form->FormName()}")) {
+		if($data = Session::get("FormInfo.{$this->form->FormName()}.data")) {
 			$this->form->loadDataFrom($data);
 		}				
 		return $this->form;
